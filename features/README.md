@@ -1,48 +1,56 @@
-# Documentazione Requisiti e Specifiche - OpenBoardJ
+# Requirements and Specifications Documentation - OpenBoardJ
 
-Sezione di tracciabilità di OpenBoardJ. Questa cartella è stata introdotta per gestire in modo strutturato l'evoluzione delle funzionalità, facilitando la manutenzione del codice e la comunicazione tra sviluppatori.
+OpenBoardJ traceability section. This folder has been introduced to manage the evolution of functionalities in a structured way, facilitating code maintenance and communication between developers.
 
-## Scopo
-L'obiettivo di questa cartella è documentare i requisiti, i vincoli e le specifiche tecniche prima della loro implementazione nel core del progetto. Questo garantisce che ogni modifica sia pianificata, tracciabile e coerente con la filosofia del software originale.
+## Purpose
 
-## Codifica dei File
-I file sono suddivisi per modulo (es. `M01` per il primo modulo analizzato) e categoria:
-- `REQ_Mnn.md`: **Requisiti (Requirements)**. Definiscono *cosa* il sistema deve fare dal punto di vista funzionale o non funzionale.
-- `SSS_Mnn.md`: **Specifiche Software (Software System Specifications)**. Definiscono *come* il requisito viene implementato tecnicamente.
-- `CON_Mnn.md`: **Vincoli (Constraints)**. Definiscono i limiti ambientali o tecnologici che influenzano lo sviluppo (es. performance, I/O, compatibilità).
+The goal of this folder is to document requirements, constraints, and technical specifications before their implementation in the project core. This ensures that every change is planned, traceable, and consistent with the philosophy of the original software.
 
-## Convenzione Naming
-Ogni entità è identificata da un codice univoco nel formato:
+## File Coding
+
+Files are organized by module (e.g., `M01` for the first module analyzed) and category:
+
+* `REQ_Mnn.md`: **Requirements**. Define *what* the system must do from a functional or non-functional perspective.
+* `SSS_Mnn.md`: **Software System Specifications**. Define *how* the requirement is technically implemented.
+* `CON_Mnn.md`: **Constraints**. Define environmental or technological limits that influence development (e.g., performance, I/O, compatibility).
+
+## Naming Convention
+
+Each entity is identified by a unique code in the format:
 `{TYPE}_{CAT}_{AREA}_{SUB}_{NNN}`
 
-- **TYPE**: `REQ` (Requisito), `SSS` (Specifica), `CON` (Vincolo).
-- **CAT**: `F` (Funzionale), `NF` (Non Funzionale).
-- **AREA**: Categoria di sistema (es. `SW` per software, `DB` per database, `GUI` per interfaccia).
-- **SUB**: Sottocategoria opzionale (es. `LOG` per logging, `UX` per esperienza utente).
-- **NNN**: Contatore numerico a tre cifre.
+* **TYPE**: `REQ` (Requirement), `SSS` (Specification), `CON` (Constraint).
+* **CAT**: `F` (Functional), `NF` (Non-Functional).
+* **AREA**: System category (e.g., `SW` for software, `DB` for database, `GUI` for interface).
+* **SUB**: Optional sub-category (e.g., `LOG` for logging, `UX` for user experience).
+* **NNN**: Three-digit numeric counter.
 
-## Protocollo di Analisi e Tracciabilità
-Per garantire l'integrità del progetto, seguiamo un protocollo di tracciabilità bidirezionale:
+## Analysis and Traceability Protocol
 
-1. **Definizione**: Ogni nuovo requisito (`REQ`) deve essere associato a una specifica (`SSS`) che ne descrive l'implementazione.
-2. **Vincoli**: I vincoli (`CON`) fungono da base per la validazione delle specifiche.
-3. **Hypertext Tracing**: Ogni file contiene link diretti agli elementi correlati.
-   - I `REQ` linkano alle rispettive `SSS`.
-   - Le `SSS` linkano ai `REQ` e ai `CON` di riferimento.
-   - I `CON` restano indipendenti (definiscono il perimetro).
+To ensure the integrity of the project, we follow a bidirectional traceability protocol:
 
-## Contributi e Workflow (Issue-based)
+1. **Definition**: Every new requirement (`REQ`) must be associated with a specification (`SSS`) that describes its implementation.
+2. **Constraints**: Constraints (`CON`) serve as the basis for validating specifications.
+3. **Hypertext Tracing**: Each file contains direct links to related elements.
+* `REQ`s link to their respective `SSS`s.
+* `SSS`s link to their reference `REQ`s and `CON`s.
+* `CON`s remain independent (they define the perimeter).
 
-Per mantenere il progetto ordinato, non accettiamo modifiche dirette ai file di documentazione se non tramite il processo di revisione via **Issue**:
 
-1. **Apertura Issue**: Se vuoi proporre un nuovo requisito o modificare uno esistente, apri una nuova *Issue* nel repository.
-2. **Template Proposta**: Nell'issue, includi:
-   - **Codifica**: Il codice del requisito (es. `REQ_NF_SW_LOG_001`).
-   - **Descrizione**: Una breve spiegazione della necessità.
-   - **Documentazione**: Il testo in formato Markdown che vorresti vedere nei file `REQ_Mnn.md`, `SSS_Mnn.md` o `CON_Mnn.md`.
-   - **Impatto**: Indica quali file/specifiche verrebbero influenzati.
-3. **Validazione**: la proposta deve essere validata, eventuali modifiche o chiarimenti verranno discussi direttamente nei commenti dell'issue.
-4. **Accettazione/Chiusura**:
-   - **Accettata**: La proposta viene integrata nei file ufficiali e l'Issue viene chiusa con un link al commit di aggiornamento.
-   - **Rifiutata**: L'Issue viene chiusa motivando la decisione, mantenendo lo storico per future consultazioni.
 
+## Contributions and Workflow (Issue-based)
+
+To keep the project organized, we do not accept direct changes to the documentation files unless through the review process via **Issue**:
+
+1. **Open an Issue**: If you want to propose a new requirement or modify an existing one, open a new *Issue* in the repository.
+2. **Proposal Template**: In the issue, include:
+* **Coding**: The requirement code (e.g., `REQ_NF_SW_LOG_001`).
+* **Description**: A brief explanation of the need.
+* **Documentation**: The text in Markdown format that you would like to see in the `REQ_Mnn.md`, `SSS_Mnn.md`, or `CON_Mnn.md` files.
+* **Impact**: Indicate which files/specifications would be affected.
+
+
+3. **Validation**: The proposal must be validated; any changes or clarifications will be discussed directly in the issue comments.
+4. **Acceptance/Closure**:
+* **Accepted**: The proposal is integrated into the official files, and the Issue is closed with a link to the update commit.
+* **Rejected**: The Issue is closed with the reasoning behind the decision, keeping the history for future reference.

@@ -1,4 +1,4 @@
-# Vincoli - Modulo 01
+# Constraints - Module 01
 
 ## NF
 
@@ -6,5 +6,4 @@
 
 #### CON_NF_SW_LOG_001
 
-- La gestione della dimensione del log non deve introdurre rallentamenti bloccanti (I/O non bloccante) durante le operazioni di scrittura.
-
+* Log size management must not introduce blocking delays (non-blocking I/O) during write operations.
