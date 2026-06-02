@@ -20,7 +20,7 @@ Each entity is identified by a unique code in the format:
 `{TYPE}_{CAT}_{AREA}_{SUB}_{NNN}`
 
 * **TYPE**: `REQ` (Requirement), `SSS` (Specification), `CON` (Constraint).
-* **CAT**: `F` (Functional), `NF` (Non-Functional).
+* **CAT**: `F` (Functional), `NF` (Non-Functional) (empty for `CON`).
 * **AREA**: System category (e.g., `SW` for software, `DB` for database, `GUI` for interface).
 * **SUB**: Optional sub-category (e.g., `LOG` for logging, `UX` for user experience).
 * **NNN**: Three-digit numeric counter.

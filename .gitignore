@@ -83,3 +83,12 @@ plugins/cffadaptor/objects
 .directory
 .DS_Store
 Doxyfile
+
+# Temporary files #
+#################
+*.tmp
+*.tmp.cpp
+*.tmp.txt
+*.tmp.md
+*.bak
+*.backup
